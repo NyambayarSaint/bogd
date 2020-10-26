@@ -11,13 +11,13 @@ export default async (req, res) => {
     if (req.method === "POST") {
 
         if(language === 'mn'){
-            let response = await Axios.post('http://192.168.10.88:1335/graphql', req.body);
+            let response = await Axios.post('http://192.168.10.88:1339/graphql', req.body);
             res.statusCode = 200
             res.setHeader('Content-Type', 'application/json')
             return res.end(JSON.stringify({data: response.data.data}))
         }
         else{
-            let response = await Axios.post('http://192.168.10.88:1335/graphql', req.body);
+            let response = await Axios.post('http://192.168.10.88:1339/graphql', req.body);
             res.statusCode = 200
             res.setHeader('Content-Type', 'application/json')
             return res.end(JSON.stringify({data: response.data.data}))
