@@ -1,0 +1,1 @@
+window.erxesSettings = { knowledgeBase: { topic_id: "FHFzHQMpaRo4pWJAN" }, }; (function() { var script = document.createElement('script'); script.src = "https://erxes.tavanbogd.mn/widgets/build/knowledgebaseWidget.bundle.js"; script.async = true; var entry = document.getElementsByTagName('script')[0]; entry.parentNode.insertBefore(script, entry); })();
