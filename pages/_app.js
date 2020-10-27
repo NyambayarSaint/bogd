@@ -13,8 +13,8 @@ class MyApp extends App {
         information: {},
         config: {},
         completelyLoaded: false,
-        serverUrl: "http://192.168.10.88:1339",
-        frontUrl: "http://192.168.10.88:8081",
+        serverUrl: "http://admin-mn.tavanbogd.com",
+        frontUrl: "http://bogdmotors.mn",
         name: "Богд Моторс ХХК",
         description: `Таван Богд Групп нь 1995 онд Япон улсын “FujiFilm” корпорацийн албан ёсны дистрибьютерийн эрхийг авснаар түүхийн хуудас эхлүүлсэн бөгөөд, 2004 оноос эхлэн ХБНГУ-ын Фольксваген Корпорацийн Монгол дахь албан ёсны төлөөлөгчийн үйл ажиллагааг эрхлэн явуулж байна. Бид Герман чанарыгМонгол орны эрс тэс уур амьсгал болоод шатахууны онцлогт тохируулсан нэмэлт тохиргоотой нь хослуулан дотоодын хэрэглэгчдэд хүргэдгээрээ давуу талтай.`
     };
@@ -24,7 +24,7 @@ class MyApp extends App {
         this.setState({ menu: res.data.data.menu, information: res.data.data.setting, config, completelyLoaded: true})
         
         // GOOGLE TAG MANAGER
-        const tagManagerArgs = { gtmId: res.data.data.setting.GoogleTagManagerID };
+        const tagManagerArgs = { gtmId: "GTM-WGW757B" };
         TagManager.initialize(tagManagerArgs);
     }
 
