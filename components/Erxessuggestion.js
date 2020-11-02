@@ -3,7 +3,7 @@ import {Parser} from 'html-to-react';
 import styled from 'styled-components';
 import { AnimatePresence, motion } from 'framer-motion';
 
-function useOutsideAlerter(ref, show, setShow, data, id) {
+function useOutsideAlerter(ref, setShow, data, id) {
     useEffect(() => {
         let used = false 
         window.addEventListener('scroll', goScroll);
@@ -28,7 +28,7 @@ function useOutsideAlerter(ref, show, setShow, data, id) {
             script.async = true;
             var entry = document.querySelector('#erxes-entry2') || document.getElementsByTagName('script')[0];
             entry.parentNode.insertBefore(script, entry);
-            setShow(true)
+            setShow(true);
         }
         /**
          * Alert if clicked on outside of element
@@ -55,7 +55,7 @@ const Erxessuggestion = ({data}) => {
 
     const id = 'el'+Math.floor(Math.random() * 100);
 
-    useOutsideAlerter(wrapperRef, show, setShow, data, id);
+    useOutsideAlerter(wrapperRef, setShow, data, id);
 
     return (
         <div id={id}>
@@ -89,8 +89,13 @@ const Container = styled.div `
     background:rgba(0,0,0,0.7);
     z-index:11;
     .box{
-        width:80vw;
-        margin-left:10vw;
+        width:50vw;
         padding:2vw;
+    }
+    @media (max-width: 768px){
+        .box{
+            width:90vw;
+            padding:0;
+        }
     }
 `
