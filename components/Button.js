@@ -5,10 +5,10 @@ import styled from 'styled-components';
 const Button = ({data}) => {
     return (
         <Container background={data && data.Background && data.Background} color={data && data.color && data.color} width={data && data.width && data.width}>
-            {data.Url.includes('.') ?
-                <a target="__blank" href={data.Url}><button>{data && data.Title && data.Title}</button></a>
+            {data.Url && data.Url.includes('.') ?
+                <a target="__blank" href={data.Url ? data.Url : '/404'}><button>{data && data.Title && data.Title}</button></a>
             :
-                <Link href={data.Url}><a><button>{data && data.Title && data.Title}</button></a></Link>
+                <Link href={data.Url ? data.Url : '/404'}><a><button>{data && data.Title && data.Title}</button></a></Link>
             }
         </Container>
     );
