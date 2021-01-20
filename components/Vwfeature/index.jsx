@@ -113,6 +113,7 @@ const Container = styled.div`
             font-size: ${({theme})=>theme.fontSizeMedium};
         }
         .tab-buttons{
+            flex-direction:column;
             li{
                 padding:8px 10px;
             }

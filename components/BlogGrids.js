@@ -80,7 +80,7 @@ const BlogGrids = ({noControl}) => {
     }
     return (
         <Container>
-            <div className="row">
+            <div className="row no-row">
             {noControl && 
             <>
             <div className="col-md-3 mb-4">
@@ -304,8 +304,11 @@ const Container = styled.div`
         }
     }
     @media only screen and (max-width: 768px){
-        padding-left:8px;
-        padding-right:8px;
+        padding-left:0px;
+        padding-right:0px;
+        .no-row{
+            margin:0px;
+        }
     }
 `;
 

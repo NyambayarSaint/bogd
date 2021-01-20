@@ -34,4 +34,15 @@ const Container = styled.div `
             color: ${color};
         `};
     }
+    @media only screen and (max-width: 768px){
+        max-width:calc(100% - 15px);
+        text-align:center;
+        margin:auto;
+        a{
+            max-width:calc(100% - 15px);
+        }
+        button{
+            max-width:calc(100% - 15px);
+        }
+    }
 `

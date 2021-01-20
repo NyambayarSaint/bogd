@@ -8,6 +8,7 @@ import minimize from "../miscs/minimize";
 const Carousel = ({data}) => {
     const unique = Math.floor(Math.random() * 100);
     const {Slide} = data || [{Image: {url: "http://riverplaza.mn/wp-content/uploads/2018/08/1920x1066_bg2.jpg"}, _id: "test123"}]
+    const {Height} = data
     const [current, setCurrent] = useState(0);
     useEffect(()=>{
         document.querySelector(`#container-${unique} .toggle-container .dots`).classList.add('active');
@@ -26,7 +27,7 @@ const Carousel = ({data}) => {
     }
     return (
         <>
-            <Container id={`container-${unique}`}>
+            <Container id={`container-${unique}`} height={Height}>
                 <Slider image={minimize(Slide[current].Image)} title={Slide[current].Title}/>
                 <motion.div initial={{opacity:0, y:-25}} animate={{opacity:1, y:0, transition: { delay: 2, duration:1 }}} className="toggle-container">
                     <li id="prev" onClick={()=>arrowHandler(-1)}><BsChevronUp fontSize={20} style={{marginBottom:15}}/></li>
@@ -74,6 +75,9 @@ const Slider = ({ image, title }) => (
 const Container = styled.div`
     width:100%;
     height:56.25vw;
+    ${({height})=>height && `
+        height:${height};
+    `};
     position: relative;
     overflow: hidden;
     background-image: url(/img/load.png);
@@ -134,6 +138,7 @@ const Container = styled.div`
     @media only screen and (max-width: 768px){
         min-height:unset;
         max-height:unset;
+        height:300px;
         h1{
             font-size: ${props=>props.theme.fontSize};
         }

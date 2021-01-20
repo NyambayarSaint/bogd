@@ -34,7 +34,7 @@ const Volkswagen = ({data}) => {
                             <div className="box">
                                 <div className="absolutetext">{car.Name}</div>
                                 <div className="normalimg"><img src={minimize(car.List.Image, 'small')}/></div>
-                                <div className="hoverimg"><img src={minimize(car.List.Image2, 'small')}/></div>
+                                <Link href={`/p/${car.Page.Slug}`}><a><div className="hoverimg"><img src={minimize(car.List.Image2, 'small')}/></div></a></Link>
                                 <p>{car.List.Title}</p>
                                 <p><strong>{car.List.Text}</strong></p>
                                 {car.Page && <Link href={`/p/${car.Page.Slug}`}><a><div className="exp"><AiFillEye/>{data.Readmore}</div></a></Link>}
@@ -48,7 +48,7 @@ const Volkswagen = ({data}) => {
                             <div className="box">
                                 <div className="absolutetext">{car.Name}</div>
                                 <div className="normalimg"><img src={minimize(car.List.Image, 'small')}/></div>
-                                <div className="hoverimg"><img src={minimize(car.List.Image2, 'small')}/></div>
+                                <Link href={`/p/${car.Page.Slug}`}><a><div className="hoverimg"><img src={minimize(car.List.Image2, 'small')}/></div></a></Link>
                                 <p>{car.List.Title}</p>
                                 <p><strong>{car.List.Text}</strong></p>
                                 {car.Page && <Link href={`/p/${car.Page.Slug}`}><a><div className="exp"><AiFillEye/>{data.Readmore}</div></a></Link>}
