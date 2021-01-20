@@ -48,6 +48,7 @@ const Header = ({menu}) => {
                     </div>
                 </div>
             </Container>
+            <div className="mobile-padding"></div>
             <div className="mobile-trigger">
                 <Link href="/"><a><img src="/img/logo.png"/></a></Link>
                 <HamburgerMenu width={40} height={20} strokeWidth={2} isOpen={mobile} menuClicked={()=>setMobile(!mobile)}/>
@@ -73,6 +74,9 @@ const Section = styled.div `
             height:50px;
         }
     }
+    .mobile-padding{
+        display:none;
+    }
     .wrapper{
         width:100%;
         position:fixed;
@@ -92,8 +96,19 @@ const Section = styled.div `
         .wrapper{
             display:none;
         }
+        .mobile-padding{
+            display:block;
+            height:66px;
+            width:100%;
+            box-shadow:1px 1px 5px rgba(0,0,0,0.3);
+        }
         .mobile-trigger{
             display:flex;
+            position: fixed;
+            top: 0px;
+            z-index: 99;
+            background: white;
+            width: 100%;
         }
     }
 `
