@@ -177,9 +177,11 @@ const BlogGrids = ({noControl}) => {
                                         )}
                                         ...
                                     </motion.p>
-                                    <a href="#">
-                                        Цааш унших <BsArrowRight/>
-                                    </a>
+                                    <Link href={R.pathname.includes('news') ? R.pathname + '/' + el.Slug : '/news/' + el.Slug}>
+                                        <a>
+                                            Цааш унших <BsArrowRight/>
+                                        </a>
+                                    </Link>
                                 </div>
                             </motion.div>
                         </div>

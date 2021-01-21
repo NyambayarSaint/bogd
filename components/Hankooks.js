@@ -24,7 +24,7 @@ const Teins = () => {
                 {!data ? 'Loading...' :
                     data.map(el=>(
                         <div className="entry" key={Math.random()} >
-                            <div className="img" style={{backgroundImage: `url(${minimize(el.Thumb)})`}}></div>
+                            <Link href={`/hankooks/${el.Slug}`}><a><div className="img" style={{backgroundImage: `url(${minimize(el.Thumb)})`}}></div></a></Link>
                             <div className="content">
                                 <strong>{el.Name}</strong>
                                 <p>{decrease(el.Description, 160)}...</p>
